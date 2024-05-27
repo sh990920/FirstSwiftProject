@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var titleOutlet: UILabel!
     let buttonTitles = ["1", "2", "3", "4", "5", "6"]
     var count = 0
+    let info = Infomation()
     
     lazy var stackView: UIStackView = {
         let stackView = UIStackView()
@@ -24,6 +25,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        info.setting()
         
         view.addSubview(stackView)
         // Do any additional setup after loading the view.
@@ -55,8 +58,8 @@ class ViewController: UIViewController {
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for i in count..<count+2 {
-            let name = buttonTitles[i]
-            let button = createButtonTitle(name)
+            let name = info.peoples[i].name
+            let button = createButtonTitle(info.peoples[i].name)
             stackView.addArrangedSubview(button)
             count += 1
         }
@@ -110,7 +113,8 @@ class ViewController: UIViewController {
             if let button = sender as? UIButton, let title = button.titleLabel?.text {
                 print(title)
                 if let destinatiorVC = segue.destination as? DetailViewController {
-                    destinatiorVC.name = title
+                    let infomation = info.findUser(title)
+                    destinatiorVC.info = infomation
                 }
             }
         }

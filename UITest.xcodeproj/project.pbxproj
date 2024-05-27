@@ -15,6 +15,7 @@
 		A246F1B62C041E8E00CCD36C /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A246F1B52C041E8E00CCD36C /* Base */; };
 		A246F1BE2C0422E900CCD36C /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246F1BD2C0422E900CCD36C /* DetailViewController.swift */; };
 		A246F1C02C04504F00CCD36C /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246F1BF2C04504F00CCD36C /* CustomButton.swift */; };
+		A246F1C22C04737F00CCD36C /* Infomation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A246F1C12C04737F00CCD36C /* Infomation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		A246F1B72C041E8E00CCD36C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A246F1BD2C0422E900CCD36C /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A246F1BF2C04504F00CCD36C /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		A246F1C12C04737F00CCD36C /* Infomation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Infomation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				A246F1B42C041E8E00CCD36C /* LaunchScreen.storyboard */,
 				A246F1B72C041E8E00CCD36C /* Info.plist */,
 				A246F1BF2C04504F00CCD36C /* CustomButton.swift */,
+				A246F1C12C04737F00CCD36C /* Infomation.swift */,
 			);
 			path = UITest;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				A246F1AE2C041E8D00CCD36C /* ViewController.swift in Sources */,
 				A246F1AA2C041E8D00CCD36C /* AppDelegate.swift in Sources */,
 				A246F1AC2C041E8D00CCD36C /* SceneDelegate.swift in Sources */,
+				A246F1C22C04737F00CCD36C /* Infomation.swift in Sources */,
 				A246F1BE2C0422E900CCD36C /* DetailViewController.swift in Sources */,
 				A246F1C02C04504F00CCD36C /* CustomButton.swift in Sources */,
 			);
