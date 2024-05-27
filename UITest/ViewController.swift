@@ -40,7 +40,7 @@ class ViewController: UIViewController {
     }
     
     
-//    // 다른 페이지로 이동할 메서드
+    // 다른 페이지로 이동할 메서드
 //    @IBAction func ChangeView(_ sender: Any) {
 //        guard let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailView") as? DetailViewController else { return }
 //        detailViewController.modalTransitionStyle = .coverVertical
@@ -90,10 +90,6 @@ class ViewController: UIViewController {
         button.setTitle(name, for: .normal)
         button.setTitleColor(.black, for: .normal)
         
-//        let image = UIImage(named: "testImage")?.withRenderingMode(.alwaysOriginal)
-//        button.setImage(image, for: .normal)
-//        button.imageView?.contentMode = .scaleAspectFill
-        
         let image = UIImage(named: "testImage")?.withRenderingMode(.alwaysOriginal)
         button.setImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
@@ -104,8 +100,24 @@ class ViewController: UIViewController {
         button.imageView?.leadingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
         button.imageView?.trailingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
         
+        button.addTarget(self, action: #selector(triggerSegue(sender:)), for: .touchUpInside)
         
         return button
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showDetail" {
+            if let button = sender as? UIButton, let title = button.titleLabel?.text {
+                print(title)
+                if let destinatiorVC = segue.destination as? DetailViewController {
+                    destinatiorVC.name = title
+                }
+            }
+        }
+    }
+    
+    @objc func triggerSegue(sender: UIButton) {
+        performSegue(withIdentifier: "showDetail", sender: sender)
     }
 
 }

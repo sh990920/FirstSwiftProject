@@ -8,6 +8,7 @@
 import UIKit
 
 class CustomButton: UIButton {
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         imageView?.layer.cornerRadius = (imageView?.frame.height ?? 0) / 2

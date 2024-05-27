@@ -9,12 +9,11 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    var name: String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(name)
     }
 
-
-//    @IBAction func goToMain(_ sender: Any) {
-//        self.presentingViewController?.dismiss(animated: true)
-//    }
 }
