@@ -14,6 +14,7 @@ struct Info {
     let MBTI: String            // MBTI
     let position: String        // 역할
     let introduce: String       // 자기소개
+    let blogURL: String         // 블로그 URL
 }
 
 class Infomation {
@@ -31,18 +32,26 @@ class Infomation {
         "다들 화이팅 하세요!!",
         "끝까지 화이팅 입니다."
     ]
+    let urls = [
+        "https://how-dev.tistory.com/",
+        "https://leedoseo.tistory.com/",
+        "https://shpark0920.tistory.com/",
+        "https://shpark0920.tistory.com/",
+        "https://velog.io/@leejh950417/posts",
+        "https://velog.io/@geon5595/posts"
+    ]
     
     // 기본 세팅
     func setting() {
         for i in 0..<6 {
-            let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i])
+            let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i], blogURL: urls[i])
             peoples.append(people)
         }
     }
     
     // 사람 검색
     func findUser(_ name: String) -> Info {
-        var info: Info = Info(name: "nil", age: 0, area: "nil", MBTI: "nil", position: "nil", introduce: "nil")
+        var info: Info = Info(name: "nil", age: 0, area: "nil", MBTI: "nil", position: "nil", introduce: "nil", blogURL: "nil")
         for i in peoples {
             if i.name == name {
                 info = i

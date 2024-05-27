@@ -35,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1112" y="-2"/>
+            <point key="canvasLocation" x="1109" y="-2"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="uQ7-x3-Xb7">
@@ -87,6 +87,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIn-ES-aS8">
+                                <rect key="frame" x="139" y="693" width="102" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="블로그 가기"/>
+                                <connections>
+                                    <action selector="goToBlog:" destination="YC1-6H-Ubn" eventType="touchUpInside" id="lMI-wO-vs2"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="g8Q-Rt-OR3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

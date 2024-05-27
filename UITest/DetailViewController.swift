@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DetailViewController: UIViewController {
     
@@ -34,4 +35,14 @@ class DetailViewController: UIViewController {
         introduce.text = "한마디 : \(info!.introduce)"
     }
 
+    @IBAction func goToBlog(_ sender: Any) {
+        // 실제 사파리 어플을 통해서 보여주기
+//        if let url = URL(string: info!.blogURL) {
+//            //UIApplication.shared.open(url, options: [:])
+//        }
+        // 컨트롤러 객체를 생성해서 화면 보여주기
+        let url = URL(string: info!.blogURL)
+        let safariViewController = SFSafariViewController(url: url!)
+        present(safariViewController, animated: true)
+    }
 }
