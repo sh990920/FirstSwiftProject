@@ -8,12 +8,12 @@
 import Foundation
 
 struct Info {
-    let name:String
-    let age:Int
-    let area: String
-    let MBTI: String
-    let position: String
-    let introduce: String
+    let name:String             // 이름
+    let age:Int                 // 나이
+    let area: String            // 사는곳
+    let MBTI: String            // MBTI
+    let position: String        // 역할
+    let introduce: String       // 자기소개
 }
 
 class Infomation {
@@ -32,6 +32,7 @@ class Infomation {
         "끝까지 화이팅 입니다."
     ]
     
+    // 기본 세팅
     func setting() {
         for i in 0..<6 {
             let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i])
@@ -39,6 +40,7 @@ class Infomation {
         }
     }
     
+    // 사람 검색
     func findUser(_ name: String) -> Info {
         var info: Info = Info(name: "nil", age: 0, area: "nil", MBTI: "nil", position: "nil", introduce: "nil")
         for i in peoples {

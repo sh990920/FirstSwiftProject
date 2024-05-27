@@ -10,8 +10,9 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var titleOutlet: UILabel!
-    let buttonTitles = ["1", "2", "3", "4", "5", "6"]
+    // 버튼을 만들 때 사용할 count
     var count = 0
+    // 개인 정보를 저장할 클래스
     let info = Infomation()
     
     lazy var stackView: UIStackView = {
@@ -25,11 +26,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // 정보 세팅
         info.setting()
         
         view.addSubview(stackView)
-        // Do any additional setup after loading the view.
+
         stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
         stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
         stackView.topAnchor.constraint(equalTo: titleOutlet.bottomAnchor, constant: 30).isActive = true
@@ -42,15 +43,6 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    // 다른 페이지로 이동할 메서드
-//    @IBAction func ChangeView(_ sender: Any) {
-//        guard let detailViewController = self.storyboard?.instantiateViewController(withIdentifier: "detailView") as? DetailViewController else { return }
-//        detailViewController.modalTransitionStyle = .coverVertical
-//        detailViewController.modalPresentationStyle = .fullScreen
-//        self.present(detailViewController, animated: true, completion: nil)
-//    }
-    
     func createButtonStackView() -> UIStackView {
         let stackView = UIStackView()
         stackView.axis = .horizontal
@@ -58,6 +50,7 @@ class ViewController: UIViewController {
         stackView.spacing = 20
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for i in count..<count+2 {
+            // 버튼의 이름 설정
             let name = info.peoples[i].name
             let button = createButtonTitle(info.peoples[i].name)
             stackView.addArrangedSubview(button)
@@ -107,7 +100,8 @@ class ViewController: UIViewController {
         
         return button
     }
-    
+
+    // 데이터 전송을 위한 함수 override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let button = sender as? UIButton, let title = button.titleLabel?.text {
@@ -120,6 +114,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // 화면전환 메서드
     @objc func triggerSegue(sender: UIButton) {
         performSegue(withIdentifier: "showDetail", sender: sender)
     }
