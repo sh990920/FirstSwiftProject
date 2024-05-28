@@ -27,6 +27,7 @@ class DetailViewController: UIViewController {
     // 한마디 Label(자기 소개로 변경 가능)
     @IBOutlet weak var introduce: UILabel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         name.text = "이름 : \(info!.name)"
@@ -45,6 +46,8 @@ class DetailViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
+        
+        
     }
 
     @IBAction func goToBlog(_ sender: Any) {
@@ -54,6 +57,11 @@ class DetailViewController: UIViewController {
 //        }
         // 컨트롤러 객체를 생성해서 화면 보여주기
         let url = URL(string: info!.blogURL)
+        let safariViewController = SFSafariViewController(url: url!)
+        present(safariViewController, animated: true)
+    }
+    @IBAction func goToGitHub(_ sender: Any) {
+        let url = URL(string: info!.gitHubURL)
         let safariViewController = SFSafariViewController(url: url!)
         present(safariViewController, animated: true)
     }

@@ -15,6 +15,7 @@ struct Info {
     let position: String        // 역할
     let introduce: String       // 자기소개
     let blogURL: String         // 블로그 URL
+    let gitHubURL: String       // 깃허브 URL
 }
 
 class Infomation {
@@ -36,22 +37,31 @@ class Infomation {
         "https://how-dev.tistory.com/",
         "https://leedoseo.tistory.com/",
         "https://shpark0920.tistory.com/",
-        "https://shpark0920.tistory.com/",
+        "https://velog.io/@zxcv123248/posts",
         "https://velog.io/@leejh950417/posts",
         "https://velog.io/@geon5595/posts"
+    ]
+    
+    let gitHubURLs = [
+        "https://github.com/Kim-Dong-Hyeon",
+        "https://github.com/Leedoseo",
+        "https://github.com/sh990920",
+        "https://github.com/min1woo",
+        "https://github.com/jjoohee95",
+        "https://github.com/geon5595"
     ]
     
     // 기본 세팅
     func setting() {
         for i in 0..<6 {
-            let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i], blogURL: urls[i])
+            let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i], blogURL: urls[i], gitHubURL: gitHubURLs[i])
             peoples.append(people)
         }
     }
     
     // 사람 검색
     func findUser(_ name: String) -> Info {
-        var info: Info = Info(name: "nil", age: 0, area: "nil", MBTI: "nil", position: "nil", introduce: "nil", blogURL: "nil")
+        var info: Info = Info(name: "nil", age: 0, area: "nil", MBTI: "nil", position: "nil", introduce: "nil", blogURL: "nil", gitHubURL: "nil")
         for i in peoples {
             if i.name == name {
                 info = i
