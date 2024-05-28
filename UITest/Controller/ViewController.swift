@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         stackView.translatesAutoresizingMaskIntoConstraints = false
         for i in count..<count+2 {
             // 버튼의 이름 설정
-            let name = info.peoples[i].name
+//            let name = info.peoples[i].name
             let button = createButtonTitle(info.peoples[i].name)
             stackView.addArrangedSubview(button)
             count += 1
