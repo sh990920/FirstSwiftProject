@@ -12,6 +12,8 @@ class DetailViewController: UIViewController {
     
     var info: Info?
     
+    // 프로필 사진
+    @IBOutlet weak var imageView: UIImageView!
     // 이름 Label
     @IBOutlet weak var name: UILabel!
     // 나이 Label
@@ -33,6 +35,16 @@ class DetailViewController: UIViewController {
         MBTI.text = "MBTI : \(info!.MBTI)"
         position.text = "역할 : \(info!.position)"
         introduce.text = "한마디 : \(info!.introduce)"
+        let image = UIImage(named: info!.name)
+        imageView.image = image
+        
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFill
+        imageView.clipsToBounds = true
+        
+        imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
     }
 
     @IBAction func goToBlog(_ sender: Any) {

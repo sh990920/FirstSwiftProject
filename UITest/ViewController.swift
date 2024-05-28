@@ -31,8 +31,8 @@ class ViewController: UIViewController {
         
         view.addSubview(stackView)
 
-        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10).isActive = true
+        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -10).isActive = true
+        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
         stackView.topAnchor.constraint(equalTo: titleOutlet.bottomAnchor, constant: 30).isActive = true
         stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         button.setTitle(name, for: .normal)
         button.setTitleColor(.black, for: .normal)
         
-        let image = UIImage(named: "testImage")?.withRenderingMode(.alwaysOriginal)
+        let image = UIImage(named: name)?.withRenderingMode(.alwaysOriginal)
         button.setImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
 
@@ -120,6 +120,3 @@ class ViewController: UIViewController {
     }
 
 }
-
-
-
