@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class DetailViewController: UIViewController, EditViewContreollerDelegate {
+class DetailViewController: UIViewController, EditViewControllerDelegate {
     
     var info: Info?
     

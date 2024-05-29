@@ -7,13 +7,13 @@
 
 import UIKit
 
-protocol EditViewContreollerDelegate: AnyObject {
+protocol EditViewControllerDelegate: AnyObject {
     func didSaveInfo(_ info: Info)
 }
 
 class EditViewController: UIViewController {
     
-    weak var delegate: EditViewContreollerDelegate?
+    weak var delegate: EditViewControllerDelegate?
     var info: Info?
     
     // 프로필 사진
@@ -39,16 +39,23 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         
         if let info = info {
-            
-            name.text = "\(info.name)"
+            setImage()
+            name.text = info.name
             age.text = "\(info.age)"
-            area.text = "\(info.area)"
-            MBTI.text = "\(info.MBTI)"
-            position.text = "\(info.position)"
-            introduce.text = "\(info.introduce)"
-            blog.text = "\(info.blogURL)"
-            github.text = "\(info.gitHubURL)"
+            area.text = info.area
+            MBTI.text = info.MBTI
+            position.text = info.position
+            introduce.text = info.introduce
+            blog.text = info.blogURL
+            github.text = info.gitHubURL
         }
+        // Save 버튼 추가
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped))
+    }
+    
+    func setImage() {
+        let image = UIImage(named: info!.name)
+        imageView.image = image
     }
     
     @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
