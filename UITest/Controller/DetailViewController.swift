@@ -39,8 +39,9 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
     }
     
     func setupImageView() {
+        var infomation = Infomation()
         // imageView 셋팅
-        let image = UIImage(named: info!.name)
+        let image = UIImage(named: infomation.images[info!.name]!)
         imageView.image = image
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill

@@ -86,7 +86,7 @@ class ViewController: UIViewController {
         button.setTitle(name, for: .normal)
         button.setTitleColor(.black, for: .normal)
         
-        let image = UIImage(named: name)?.withRenderingMode(.alwaysOriginal)
+        let image = UIImage(named: info.images[name]!)?.withRenderingMode(.alwaysOriginal)
         button.setImage(image, for: .normal)
         button.imageView?.contentMode = .scaleAspectFill
 

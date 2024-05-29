@@ -51,6 +51,15 @@ class Infomation {
         "https://github.com/geon5595"
     ]
     
+    let images = [
+        "김동현" : "kdh",
+        "김광현" : "kkh",
+        "박승환" : "psh",
+        "유민우" : "umy",
+        "이주희" : "ljh",
+        "최건" : "ck"
+    ]
+    
     // 기본 세팅
     func setting() {
         for i in 0..<6 {
