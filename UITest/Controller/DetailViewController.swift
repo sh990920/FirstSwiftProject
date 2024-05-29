@@ -8,7 +8,7 @@
 import UIKit
 import SafariServices
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, EditViewContreollerDelegate {
     
     var info: Info?
     
@@ -17,6 +17,28 @@ class DetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editButtonTapped))
+        
+        setupImageView()
+        setupInfoStackView()
+    }
+    
+    @objc func editButtonTapped() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        if let editVC = storyboard.instantiateViewController(withIdentifier: "EditViewController") as? EditViewController {
+            editVC.info = self.info
+            editVC.delegate = self
+            navigationController?.pushViewController(editVC, animated: true)
+        }
+    }
+    
+    func didSaveInfo(_ info: Info) {
+        self.info = info
+        setupInfoStackView()
+    }
+    
+    func setupImageView() {
         // imageView 셋팅
         let image = UIImage(named: info!.name)
         imageView.image = image
@@ -27,7 +49,10 @@ class DetailViewController: UIViewController {
         imageView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         imageView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
         imageView.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
-        
+    }
+    
+    func setupInfoStackView() {
+        view.subviews.forEach { if $0 is UIStackView { $0.removeFromSuperview() } }
         // stackView 생성 및 세팅
         let stackView = createInfoStackView()
         // 화면에 stackView 추가

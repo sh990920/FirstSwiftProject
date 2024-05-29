@@ -56,11 +56,132 @@
                     <navigationItem key="navigationItem" id="lSY-Ds-X2d"/>
                     <connections>
                         <outlet property="imageView" destination="UJ5-uO-nFI" id="ROC-z4-6M0"/>
+                        <segue destination="BA9-ap-FbD" kind="showDetail" id="GHW-Ih-xq1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4eR-Fh-B4E" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2041.9847328244275" y="-2.1126760563380285"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="Ybs-OQ-CpD">
+            <objects>
+                <viewController id="BA9-ap-FbD" customClass="EditViewController" customModule="UITest" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O5M-ZO-Sch">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgP-pN-dMF">
+                                <rect key="frame" x="71.666666666666686" y="40" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="a5n-co-Rzd"/>
+                                    <constraint firstAttribute="width" constant="250" id="hZj-6H-mtS"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moD-bs-G8Y">
+                                <rect key="frame" x="96.666666666666686" y="340" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="nWF-24-gwD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDl-ps-cmE">
+                                <rect key="frame" x="96.666666666666686" y="389" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="TYK-N1-Jko"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="지역" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRH-qX-k9G">
+                                <rect key="frame" x="96.666666666666686" y="438" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="qjG-FV-W1O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MBTI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-Vm-PeM">
+                                <rect key="frame" x="96.666666666666686" y="487" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="B2t-bU-h8u"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="역할" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyM-Zr-zOI">
+                                <rect key="frame" x="96.666666666666686" y="536" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="mnR-5Z-NQJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한마디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-Fr-Wi6">
+                                <rect key="frame" x="96.666666666666686" y="585" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="FTA-Pi-yvF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="블로그 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x26-po-8W6">
+                                <rect key="frame" x="96.666666666666686" y="634" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="hpN-fz-h0x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="깃허브 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FII-fL-WSs">
+                                <rect key="frame" x="96.666666666666686" y="683" width="200" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="wjD-PE-tUz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bvs-Hc-Nzr"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="rgP-pN-dMF" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="4Gl-a7-1VE"/>
+                            <constraint firstItem="moD-bs-G8Y" firstAttribute="top" secondItem="rgP-pN-dMF" secondAttribute="bottom" constant="50" id="9xl-yL-hpf"/>
+                            <constraint firstItem="FII-fL-WSs" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="AC8-Ix-Duf"/>
+                            <constraint firstItem="x26-po-8W6" firstAttribute="top" secondItem="oqo-Fr-Wi6" secondAttribute="bottom" constant="15" id="Akl-Pk-BgR"/>
+                            <constraint firstItem="x26-po-8W6" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="Cd8-Kc-uOW"/>
+                            <constraint firstItem="ynu-Vm-PeM" firstAttribute="top" secondItem="zRH-qX-k9G" secondAttribute="bottom" constant="15" id="McM-gU-W3a"/>
+                            <constraint firstItem="oqo-Fr-Wi6" firstAttribute="top" secondItem="fyM-Zr-zOI" secondAttribute="bottom" constant="15" id="R2s-i6-cEl"/>
+                            <constraint firstItem="oqo-Fr-Wi6" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="T9J-OJ-grE"/>
+                            <constraint firstItem="FII-fL-WSs" firstAttribute="top" secondItem="x26-po-8W6" secondAttribute="bottom" constant="15" id="XsK-g2-trZ"/>
+                            <constraint firstItem="fyM-Zr-zOI" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="XuV-HL-7CY"/>
+                            <constraint firstItem="moD-bs-G8Y" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="Y8y-ak-y06"/>
+                            <constraint firstItem="cDl-ps-cmE" firstAttribute="top" secondItem="moD-bs-G8Y" secondAttribute="bottom" constant="15" id="inL-Ql-Uwh"/>
+                            <constraint firstItem="ynu-Vm-PeM" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="liH-F8-1lB"/>
+                            <constraint firstItem="zRH-qX-k9G" firstAttribute="top" secondItem="cDl-ps-cmE" secondAttribute="bottom" constant="15" id="lwr-UR-eNS"/>
+                            <constraint firstItem="cDl-ps-cmE" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="mQv-rj-N0Q"/>
+                            <constraint firstItem="fyM-Zr-zOI" firstAttribute="top" secondItem="ynu-Vm-PeM" secondAttribute="bottom" constant="15" id="mlb-PR-gOi"/>
+                            <constraint firstItem="rgP-pN-dMF" firstAttribute="top" secondItem="bvs-Hc-Nzr" secondAttribute="top" constant="40" id="rdS-g6-K2f"/>
+                            <constraint firstItem="zRH-qX-k9G" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="wLZ-oP-o1u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="gi5-c7-myt"/>
+                    <connections>
+                        <outlet property="MBTI" destination="ynu-Vm-PeM" id="I9q-PJ-WjV"/>
+                        <outlet property="age" destination="cDl-ps-cmE" id="BBU-UM-nK9"/>
+                        <outlet property="area" destination="zRH-qX-k9G" id="Wn8-c2-Pug"/>
+                        <outlet property="blog" destination="x26-po-8W6" id="h6U-aB-Ff7"/>
+                        <outlet property="github" destination="FII-fL-WSs" id="SzG-Le-ITc"/>
+                        <outlet property="imageView" destination="rgP-pN-dMF" id="0us-v5-uP7"/>
+                        <outlet property="introduce" destination="oqo-Fr-Wi6" id="Fyt-Nj-hBN"/>
+                        <outlet property="name" destination="moD-bs-G8Y" id="pAb-t4-kac"/>
+                        <outlet property="position" destination="fyM-Zr-zOI" id="W5a-dC-5Zh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="how-NU-E80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2936.6412213740455" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qbT-pu-KNA">
