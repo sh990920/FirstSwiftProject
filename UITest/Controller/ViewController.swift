@@ -28,6 +28,7 @@ class ViewController: UIViewController, EditViewControllerDelegate {
     // 최건
     @IBOutlet weak var geonprofile: UIButton!
     @IBOutlet weak var geonbackground: UIView!
+    
     // 유민우
     @IBOutlet weak var minprofile: UIButton!
     @IBOutlet weak var minbackground: UIView!
@@ -35,7 +36,6 @@ class ViewController: UIViewController, EditViewControllerDelegate {
     
     // 개인 정보를 저장할 클래스
     let info = Infomation.shared
-    
         
     override func viewDidLoad() {
         super.viewDidLoad()

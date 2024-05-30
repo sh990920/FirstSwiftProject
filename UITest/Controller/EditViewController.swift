@@ -71,7 +71,6 @@ class EditViewController: UIViewController {
         }
         
         let updatedInfo = Info(name: name, age: age, area: area, MBTI: MBTI, position: position, introduce: introduce, blogURL: blogURL, gitHubURL: gitHubURL)
-        print(updatedInfo)
         delegate?.didSaveInfo(updatedInfo)
         navigationController?.popViewController(animated: true)
 

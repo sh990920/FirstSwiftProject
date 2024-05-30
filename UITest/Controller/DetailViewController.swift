@@ -27,7 +27,6 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
         
         setupImageView()
         setupInfoStackView()
-        print(info)
     }
     
     @objc func editButtonTapped() {
@@ -44,7 +43,6 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
         delegate?.didSaveInfo(info)
         setupImageView()
         setupInfoStackView()
-        print(info)
     }
     
     func setupImageView() {
