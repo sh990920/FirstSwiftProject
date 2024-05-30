@@ -35,7 +35,7 @@ class ViewController: UIViewController, EditViewControllerDelegate {
     
     
     // 개인 정보를 저장할 클래스
-    let info = Infomation.shared
+    let info = Information.shared
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,8 +70,8 @@ class ViewController: UIViewController, EditViewControllerDelegate {
             if let button = sender as? UIButton, let title = button.titleLabel?.text {
                 print(title)
                 if let destinatiorVC = segue.destination as? DetailViewController {
-                    let infomation = info.findUser(title)
-                    destinatiorVC.info = infomation
+                    let information = info.findUser(title)
+                    destinatiorVC.info = information
                     destinatiorVC.delegate = self
                 }
             }

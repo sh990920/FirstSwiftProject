@@ -46,9 +46,9 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
     }
     
     func setupImageView() {
-        let infomation = Infomation.shared
+        let information = Information.shared
         // imageView 셋팅
-        if let name = info?.name, let imageName = infomation.images[name], let image = UIImage(named: imageName) {
+        if let name = info?.name, let imageName = information.images[name], let image = UIImage(named: imageName) {
             imageView.image = image
         } else {
             imageView.image = nil

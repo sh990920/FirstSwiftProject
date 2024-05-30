@@ -50,8 +50,8 @@ class EditViewController: UIViewController {
     }
     
     func setupImageView() {
-        let infomation = Infomation.shared
-        if let name = info?.name, let imageName = infomation.images[name], let image = UIImage(named: imageName) {
+        let information = Information.shared
+        if let name = info?.name, let imageName = information.images[name], let image = UIImage(named: imageName) {
             imageView.image = image
         } else {
             imageView.image = UIImage(named: "defaultImage")

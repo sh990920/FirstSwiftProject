@@ -1,5 +1,5 @@
 //
-//  Infomation.swift
+//  Information.swift
 //  UITest
 //
 //  Created by 박승환 on 5/27/24.
@@ -18,8 +18,8 @@ struct Info {
     var gitHubURL: String       // 깃허브 URL
 }
 
-class Infomation {
-    static let shared = Infomation()
+class Information {
+    static let shared = Information()
     
     var peoples = Array<Info>()
     
