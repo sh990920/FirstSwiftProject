@@ -21,17 +21,17 @@ struct Info {
 class Infomation {
     var peoples = Array<Info>()
     let names = ["김동현", "김광현", "박승환", "유민우", "이주희", "최건"]
-    let ages = [20, 21, 22, 23, 24, 25]
-    let areas = ["서울", "부산", "대구", "대전", "인천", "광주"]
+    let ages = [29, 27, 26, 25, 30, 29]
+    let areas = ["인천", "화성", "서울", "강릉", "전주", "양평"]
     let MBTIs = ["ESFJ", "INTJ", "ISFP", "ESTJ", "INFP", "ISFP"]
     let positions = ["팀장", "부팀장", "팀원", "팀원", "팀원", "팀원"]
     let introduces = [
-        "화이팅 입니다!",
-        "화이팅~!",
-        "화이팅!",
-        "여러분 화이팅",
-        "다들 화이팅 하세요!!",
-        "끝까지 화이팅 입니다."
+        "화이팅 입니다!1년 남았다..",
+        "30 많이 남았다!!",
+        "4년은 길다!",
+        "아직 5년 남았다!",
+        "30은 별거 없다!",
+        "30이 코앞이다..."
     ]
     let urls = [
         "https://how-dev.tistory.com/",
