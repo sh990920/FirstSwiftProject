@@ -16,14 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" ambiguous="YES" text="어떤 사람이 궁금하신가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln8-Rk-PXB">
-                                <rect key="frame" x="68.333333333333343" y="77.666666666666671" width="256.66666666666663" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="어떤 사람이 궁금하신가요?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ln8-Rk-PXB">
+                                <rect key="frame" x="68.333333333333343" y="78" width="256.66666666666663" height="27"/>
                                 <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="궁금한 사람을 눌러보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-dg-VMo">
-                                <rect key="frame" x="103" y="117.66666666666669" width="187" height="20.333333333333314"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="궁금한 사람을 눌러보세요!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cKc-dg-VMo">
+                                <rect key="frame" x="103" y="117.99999999999999" width="187" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -52,8 +52,8 @@
                                     <constraint firstItem="Mfp-Of-ySY" firstAttribute="top" secondItem="ST7-dE-2IO" secondAttribute="bottom" constant="8" symbolic="YES" id="kzl-nI-mHe"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-0U-tKH">
-                                <rect key="frame" x="211" y="183" width="135" height="175"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sw7-0U-tKH">
+                                <rect key="frame" x="211" y="183.33333333333337" width="135" height="174.66666666666663"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HPj-CG-cuj">
                                         <rect key="frame" x="0.0" y="0.0" width="135" height="139"/>
@@ -64,8 +64,8 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button" image="Kim"/>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="김광현 (부팀장)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-Fs-CNq">
-                                        <rect key="frame" x="11" y="146" width="113" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김광현 (부팀장)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gwg-Fs-CNq">
+                                        <rect key="frame" x="11" y="145.66666666666666" width="113" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -81,6 +81,7 @@
                                     <constraint firstItem="gwg-Fs-CNq" firstAttribute="leading" secondItem="sw7-0U-tKH" secondAttribute="leading" constant="11" id="s5K-9m-t2j"/>
                                     <constraint firstAttribute="width" constant="135" id="uQa-IT-9pz"/>
                                     <constraint firstItem="gwg-Fs-CNq" firstAttribute="bottom" secondItem="sw7-0U-tKH" secondAttribute="bottomMargin" id="wJS-g4-t9h"/>
+                                    <constraint firstAttribute="height" constant="174.66999999999999" id="zJY-Xg-QDn"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiS-da-4rJ">
