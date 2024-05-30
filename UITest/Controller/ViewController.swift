@@ -39,10 +39,6 @@ class ViewController: UIViewController, EditViewControllerDelegate {
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        // 정보 세팅
-        info.setting()
-        
-        
         
         setUP(parkprofile, parkbackground, info.names[2])
         setUP(kimprofile, kimbackground, info.names[1])

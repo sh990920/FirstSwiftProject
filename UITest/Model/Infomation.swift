@@ -8,22 +8,18 @@
 import Foundation
 
 struct Info {
-    let name:String             // 이름
-    let age:Int                 // 나이
-    let area: String            // 사는곳
-    let MBTI: String            // MBTI
-    let position: String        // 역할
-    let introduce: String       // 자기소개
-    let blogURL: String         // 블로그 URL
-    let gitHubURL: String       // 깃허브 URL
+    var name:String             // 이름
+    var age:Int                 // 나이
+    var area: String            // 사는곳
+    var MBTI: String            // MBTI
+    var position: String        // 역할
+    var introduce: String       // 자기소개
+    var blogURL: String         // 블로그 URL
+    var gitHubURL: String       // 깃허브 URL
 }
 
 class Infomation {
     static let shared = Infomation()
-    
-    private init() {
-        setting()
-    }
     
     var peoples = Array<Info>()
     
@@ -67,11 +63,17 @@ class Infomation {
         "최건" : "ck"
     ]
     
+    private init() {
+        setting()
+    }
+    
     // 기본 세팅
     func setting() {
-        for i in 0..<6 {
-            let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i], blogURL: urls[i], gitHubURL: gitHubURLs[i])
-            peoples.append(people)
+        if peoples.isEmpty {
+            for i in 0..<6 {
+                let people = Info(name: names[i], age: ages[i], area: areas[i], MBTI: MBTIs[i], position: positions[i], introduce: introduces[i], blogURL: urls[i], gitHubURL: gitHubURLs[i])
+                peoples.append(people)
+            }
         }
     }
     
