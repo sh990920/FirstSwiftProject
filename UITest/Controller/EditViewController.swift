@@ -15,7 +15,7 @@ class EditViewController: UIViewController {
     // 프로필 사진
     @IBOutlet weak var imageView: UIImageView!
     // 이름 TextField
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var name: UILabel!
     // 나이 TextField
     @IBOutlet weak var age: UITextField!
     // 지역 TextField
