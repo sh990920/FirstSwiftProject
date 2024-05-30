@@ -277,114 +277,225 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rgP-pN-dMF">
-                                <rect key="frame" x="71.666666666666686" y="84" width="250" height="250"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="24i-2x-QGG">
+                                <rect key="frame" x="71.666666666666686" y="59" width="250" height="250"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="250" id="a5n-co-Rzd"/>
-                                    <constraint firstAttribute="width" constant="250" id="hZj-6H-mtS"/>
+                                    <constraint firstAttribute="width" constant="250" id="aSJ-gP-1O5"/>
+                                    <constraint firstAttribute="height" constant="250" id="f1Z-V5-6ME"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="moD-bs-G8Y">
-                                <rect key="frame" x="71.666666666666686" y="364" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="nWF-24-gwD"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cDl-ps-cmE">
-                                <rect key="frame" x="71.666666666666686" y="413" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="TYK-N1-Jko"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="지역" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zRH-qX-k9G">
-                                <rect key="frame" x="71.666666666666686" y="462" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="qjG-FV-W1O"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MBTI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ynu-Vm-PeM">
-                                <rect key="frame" x="71.666666666666686" y="511" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="B2t-bU-h8u"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="역할" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fyM-Zr-zOI">
-                                <rect key="frame" x="71.666666666666686" y="560" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="mnR-5Z-NQJ"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한마디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oqo-Fr-Wi6">
-                                <rect key="frame" x="71.666666666666686" y="609" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FTA-Pi-yvF"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="블로그 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="x26-po-8W6">
-                                <rect key="frame" x="71.666666666666686" y="658" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="hpN-fz-h0x"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="깃허브 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FII-fL-WSs">
-                                <rect key="frame" x="71.666666666666686" y="707" width="250" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="wjD-PE-tUz"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="jak-eL-wNH" userLabel="Name Stack View">
+                                <rect key="frame" x="66.666666666666686" y="344" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7v-04-q0V" userLabel="nameText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="2eS-HA-93c"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jW-uf-n8I">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="XG2-gD-zSS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="RXF-xH-oNT" userLabel="Age Stack View">
+                                <rect key="frame" x="66.666666666666686" y="388" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="나이" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aa1-fY-ip3" userLabel="ageText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="d0M-uI-LQk"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="나이" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G74-00-7Qb">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="emv-0A-u3f"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="YJw-An-RSl" userLabel="Area Stack View">
+                                <rect key="frame" x="66.666666666666686" y="432" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="지역" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kwy-kg-rml" userLabel="areaText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="SrR-Af-Trj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="지역" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LXx-jc-S2S">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="5ly-L2-C1X"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="7Oe-Ee-OtR" userLabel="MBTI Stack View">
+                                <rect key="frame" x="66.666666666666686" y="476" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="mbti" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="djT-n7-rk5" userLabel="mbtiText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="o9E-xV-mPb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MBTI" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Awz-gF-9J2">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Gey-AL-MAf"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Yze-Qw-bN5" userLabel="Position Stack View">
+                                <rect key="frame" x="66.666666666666686" y="520" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="역할" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMR-Mx-2EI" userLabel="positionText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="9D5-wh-69o"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="역할" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-7u-rNt">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="BEP-2B-yCj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="lxs-Dy-MuD" userLabel="introduce Stack View">
+                                <rect key="frame" x="66.666666666666686" y="564" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="한마디" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="szM-NL-NgL" userLabel="introduceText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="6KW-pg-udh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="한마디" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FRI-c8-40q">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="Gta-mR-Y2K"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="fJy-uP-0GO" userLabel="Github Stack View">
+                                <rect key="frame" x="66.666666666666686" y="608" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Git" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K4I-PM-gA4" userLabel="githubText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="eUV-AK-7Ib"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="깃허브 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6dm-BI-MbH">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="wAR-H9-Dbg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="0A6-Xt-lQw" userLabel="Blog Stack View">
+                                <rect key="frame" x="66.666666666666686" y="652" width="260" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blog" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZm-6E-prG" userLabel="blogText">
+                                        <rect key="frame" x="0.0" y="0.0" width="45" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="45" id="i5u-vD-MSM"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="블로그 주소" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3HN-1b-Cii">
+                                        <rect key="frame" x="60" y="0.0" width="200" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="9cJ-2Y-kOW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bvs-Hc-Nzr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="rgP-pN-dMF" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="4Gl-a7-1VE"/>
-                            <constraint firstItem="moD-bs-G8Y" firstAttribute="top" secondItem="rgP-pN-dMF" secondAttribute="bottom" constant="30" id="9xl-yL-hpf"/>
-                            <constraint firstItem="FII-fL-WSs" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="AC8-Ix-Duf"/>
-                            <constraint firstItem="x26-po-8W6" firstAttribute="top" secondItem="oqo-Fr-Wi6" secondAttribute="bottom" constant="15" id="Akl-Pk-BgR"/>
-                            <constraint firstItem="x26-po-8W6" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="Cd8-Kc-uOW"/>
-                            <constraint firstItem="ynu-Vm-PeM" firstAttribute="top" secondItem="zRH-qX-k9G" secondAttribute="bottom" constant="15" id="McM-gU-W3a"/>
-                            <constraint firstItem="oqo-Fr-Wi6" firstAttribute="top" secondItem="fyM-Zr-zOI" secondAttribute="bottom" constant="15" id="R2s-i6-cEl"/>
-                            <constraint firstItem="oqo-Fr-Wi6" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="T9J-OJ-grE"/>
-                            <constraint firstItem="FII-fL-WSs" firstAttribute="top" secondItem="x26-po-8W6" secondAttribute="bottom" constant="15" id="XsK-g2-trZ"/>
-                            <constraint firstItem="fyM-Zr-zOI" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="XuV-HL-7CY"/>
-                            <constraint firstItem="moD-bs-G8Y" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="Y8y-ak-y06"/>
-                            <constraint firstItem="cDl-ps-cmE" firstAttribute="top" secondItem="moD-bs-G8Y" secondAttribute="bottom" constant="15" id="inL-Ql-Uwh"/>
-                            <constraint firstItem="ynu-Vm-PeM" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="liH-F8-1lB"/>
-                            <constraint firstItem="zRH-qX-k9G" firstAttribute="top" secondItem="cDl-ps-cmE" secondAttribute="bottom" constant="15" id="lwr-UR-eNS"/>
-                            <constraint firstItem="cDl-ps-cmE" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="mQv-rj-N0Q"/>
-                            <constraint firstItem="fyM-Zr-zOI" firstAttribute="top" secondItem="ynu-Vm-PeM" secondAttribute="bottom" constant="15" id="mlb-PR-gOi"/>
-                            <constraint firstItem="rgP-pN-dMF" firstAttribute="top" secondItem="bvs-Hc-Nzr" secondAttribute="top" constant="25" id="rdS-g6-K2f"/>
-                            <constraint firstItem="zRH-qX-k9G" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="wLZ-oP-o1u"/>
+                            <constraint firstItem="lxs-Dy-MuD" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="1oP-Mz-v1z"/>
+                            <constraint firstItem="RXF-xH-oNT" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="2NI-Ga-nl5"/>
+                            <constraint firstItem="7Oe-Ee-OtR" firstAttribute="top" secondItem="YJw-An-RSl" secondAttribute="bottom" constant="10" id="2tE-0P-NT2"/>
+                            <constraint firstItem="7Oe-Ee-OtR" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="4eS-Ok-kVS"/>
+                            <constraint firstItem="YJw-An-RSl" firstAttribute="top" secondItem="RXF-xH-oNT" secondAttribute="bottom" constant="10" id="6UK-TE-1Vy"/>
+                            <constraint firstItem="lxs-Dy-MuD" firstAttribute="top" secondItem="Yze-Qw-bN5" secondAttribute="bottom" constant="10" id="L1Y-CA-PGE"/>
+                            <constraint firstItem="Yze-Qw-bN5" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="R6G-Tf-ByG"/>
+                            <constraint firstItem="fJy-uP-0GO" firstAttribute="top" secondItem="lxs-Dy-MuD" secondAttribute="bottom" constant="10" id="TMH-L4-NPd"/>
+                            <constraint firstItem="fJy-uP-0GO" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="WfP-EV-TtW"/>
+                            <constraint firstItem="24i-2x-QGG" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="dts-WV-xJa"/>
+                            <constraint firstItem="RXF-xH-oNT" firstAttribute="top" secondItem="jak-eL-wNH" secondAttribute="bottom" constant="10" id="eBY-Ug-rUX"/>
+                            <constraint firstItem="jak-eL-wNH" firstAttribute="top" secondItem="24i-2x-QGG" secondAttribute="bottom" constant="35" id="eLq-MN-m7p"/>
+                            <constraint firstItem="0A6-Xt-lQw" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="hSU-bU-Fxg"/>
+                            <constraint firstItem="Yze-Qw-bN5" firstAttribute="top" secondItem="7Oe-Ee-OtR" secondAttribute="bottom" constant="10" id="lhh-oZ-cmc"/>
+                            <constraint firstItem="jak-eL-wNH" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="oyQ-gE-8xk"/>
+                            <constraint firstItem="0A6-Xt-lQw" firstAttribute="top" secondItem="fJy-uP-0GO" secondAttribute="bottom" constant="10" id="z1I-hQ-96b"/>
+                            <constraint firstItem="YJw-An-RSl" firstAttribute="centerX" secondItem="O5M-ZO-Sch" secondAttribute="centerX" id="z1r-j8-pTT"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Afz-iU-DTY"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="MBTI" destination="ynu-Vm-PeM" id="I9q-PJ-WjV"/>
-                        <outlet property="age" destination="cDl-ps-cmE" id="BBU-UM-nK9"/>
-                        <outlet property="area" destination="zRH-qX-k9G" id="Wn8-c2-Pug"/>
-                        <outlet property="blog" destination="x26-po-8W6" id="h6U-aB-Ff7"/>
-                        <outlet property="github" destination="FII-fL-WSs" id="SzG-Le-ITc"/>
-                        <outlet property="imageView" destination="rgP-pN-dMF" id="0us-v5-uP7"/>
-                        <outlet property="introduce" destination="oqo-Fr-Wi6" id="Fyt-Nj-hBN"/>
-                        <outlet property="name" destination="moD-bs-G8Y" id="pAb-t4-kac"/>
-                        <outlet property="position" destination="fyM-Zr-zOI" id="W5a-dC-5Zh"/>
+                        <outlet property="MBTI" destination="Awz-gF-9J2" id="DiM-DA-7fr"/>
+                        <outlet property="age" destination="G74-00-7Qb" id="y3y-3C-8WQ"/>
+                        <outlet property="area" destination="LXx-jc-S2S" id="flo-DC-aPw"/>
+                        <outlet property="blog" destination="3HN-1b-Cii" id="97N-vi-EaB"/>
+                        <outlet property="github" destination="6dm-BI-MbH" id="kkr-WL-SRO"/>
+                        <outlet property="imageView" destination="24i-2x-QGG" id="H4x-p7-es2"/>
+                        <outlet property="introduce" destination="FRI-c8-40q" id="0gC-go-vpG"/>
+                        <outlet property="name" destination="7jW-uf-n8I" id="40X-O8-EZT"/>
+                        <outlet property="position" destination="gd8-7u-rNt" id="cwo-1w-ket"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="how-NU-E80" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

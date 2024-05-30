@@ -42,6 +42,8 @@ class ViewController: UIViewController, EditViewControllerDelegate {
         // 정보 세팅
         info.setting()
         
+        
+        
         setUP(parkprofile, parkbackground, info.names[2])
         setUP(kimprofile, kimbackground, info.names[1])
         setUP(kimdhprofile, kimdhbackground, info.names[0])
