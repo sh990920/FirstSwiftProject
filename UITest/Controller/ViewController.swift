@@ -9,97 +9,86 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var titleOutlet: UILabel!
-    // 버튼을 만들 때 사용할 count
-    var count = 0
+    // 박승환
+    @IBOutlet weak var parkprofile: UIButton!
+    @IBOutlet weak var parkbackground: UIView!
+      
+    // 김광현
+    @IBOutlet weak var kimprofile: UIButton!
+    @IBOutlet weak var kimbackground: UIView!
+      
+    // 김동현
+    @IBOutlet weak var kimdhprofile: UIButton!
+    @IBOutlet weak var kimdhbackground: UIView!
+    
+    // 이주희
+    @IBOutlet weak var leejhprofile: UIButton!
+    @IBOutlet weak var leejhbackground: UIView!
+      
+    // 최건
+    @IBOutlet weak var geonprofile: UIButton!
+    @IBOutlet weak var geonbackground: UIView!
+    // 유민우
+    @IBOutlet weak var minprofile: UIButton!
+    @IBOutlet weak var minbackground: UIView!
+    
+    
     // 개인 정보를 저장할 클래스
     let info = Infomation()
     
-    lazy var stackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = 30
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        return stackView
-    }()
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         // 정보 세팅
         info.setting()
         
-        view.addSubview(stackView)
-
-        stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -10).isActive = true
-        stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -30).isActive = true
-        stackView.topAnchor.constraint(equalTo: titleOutlet.bottomAnchor, constant: 30).isActive = true
-        stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        stackView.bottomAnchor.constraint(lessThanOrEqualTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20).isActive = true
+        setUP(parkprofile, parkbackground, info.names[2])
+        setUP(kimprofile, kimbackground, info.names[1])
+        setUP(kimdhprofile, kimdhbackground, info.names[0])
+        setUP(leejhprofile, leejhbackground, info.names[4])
+        setUP(geonprofile, geonbackground, info.names[5])
+        setUP(minprofile, minbackground, info.names[3])
         
-        for _ in 0..<3 {
-            let buttonStackView = createButtonStackView()
-            stackView.addArrangedSubview(buttonStackView)
-        }
     }
     
-    func createButtonStackView() -> UIStackView {
-        let stackView = UIStackView()
-        stackView.axis = .horizontal
-        stackView.distribution = .fillEqually
-        stackView.spacing = 20
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        for i in count..<count+2 {
-            // 버튼의 이름 설정
-//            let name = info.peoples[i].name
-            let button = createButtonTitle(info.peoples[i].name)
-            stackView.addArrangedSubview(button)
-            count += 1
-        }
-        return stackView
+    func setUP(_ imageView: UIButton, _ view:UIView, _ name: String) {
+        imageView.clipsToBounds = true
+        imageView.layer.cornerRadius = 10
+        imageView.layer.maskedCorners = CACornerMask(arrayLiteral: .layerMinXMinYCorner, .layerMaxXMinYCorner)
+        imageView.setTitle(name, for: .normal)
+        imageView.addTarget(self, action: #selector(triggerSegue(sender: )), for: .touchUpInside)
+        
+        view.layer.cornerRadius = 10
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.masksToBounds = false
+        view.layer.shadowOffset = CGSize(width: 3, height: 3)
+        view.layer.shadowRadius = 3
+        view.layer.shadowOpacity = 0.5
     }
     
-    func createButtonTitle(_ name: String) -> UIStackView {
-        let stackView = UIStackView()
-        stackView.axis = .vertical
-        stackView.distribution = .fillEqually
-        stackView.spacing = 1
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let button = createButton(name)
-        let label = UILabel()
-        
-        label.text = name
-        label.textAlignment = .center
-        stackView.addArrangedSubview(button)
-        stackView.addArrangedSubview(label)
-        
-        button.heightAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.75).isActive = true
-        button.widthAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.75).isActive = true
-        label.heightAnchor.constraint(equalTo: stackView.widthAnchor, multiplier: 0.25).isActive = true
-        return stackView
-    }
     
-    func createButton(_ name: String) -> UIButton {
-        let button = CustomButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitle(name, for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        
-        let image = UIImage(named: info.images[name]!)?.withRenderingMode(.alwaysOriginal)
-        button.setImage(image, for: .normal)
-        button.imageView?.contentMode = .scaleAspectFill
-
-        // imageView가 버튼 영역을 채우도록 함
-        button.imageView?.topAnchor.constraint(equalTo: button.topAnchor).isActive = true
-        button.imageView?.bottomAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
-        button.imageView?.leadingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
-        button.imageView?.trailingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
-        
-        button.addTarget(self, action: #selector(triggerSegue(sender:)), for: .touchUpInside)
-        
-        return button
-    }
+    
+    
+//    func createButton(_ name: String) -> UIButton {
+//        let button = CustomButton()
+//        button.translatesAutoresizingMaskIntoConstraints = false
+//        button.setTitle(name, for: .normal)
+//        button.setTitleColor(.black, for: .normal)
+//        
+//        let image = UIImage(named: info.images[name]!)?.withRenderingMode(.alwaysOriginal)
+//        button.setImage(image, for: .normal)
+//        button.imageView?.contentMode = .scaleAspectFill
+//
+//        // imageView가 버튼 영역을 채우도록 함
+//        button.imageView?.topAnchor.constraint(equalTo: button.topAnchor).isActive = true
+//        button.imageView?.bottomAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
+//        button.imageView?.leadingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
+//        button.imageView?.trailingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
+//        
+//        button.addTarget(self, action: #selector(triggerSegue(sender:)), for: .touchUpInside)
+//        
+//        return button
+//    }
 
     // 데이터 전송을 위한 함수 override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
