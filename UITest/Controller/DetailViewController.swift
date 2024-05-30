@@ -8,9 +8,14 @@
 import UIKit
 import SafariServices
 
+protocol EditViewControllerDelegate: AnyObject {
+    func didSaveInfo(_ info: Info)
+}
+
 class DetailViewController: UIViewController, EditViewControllerDelegate {
     
     var info: Info?
+    weak var delegate: EditViewControllerDelegate?
     
     // 프로필 사진
     @IBOutlet weak var imageView: UIImageView!
@@ -22,6 +27,7 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
         
         setupImageView()
         setupInfoStackView()
+        print(info)
     }
     
     @objc func editButtonTapped() {
@@ -35,14 +41,20 @@ class DetailViewController: UIViewController, EditViewControllerDelegate {
     
     func didSaveInfo(_ info: Info) {
         self.info = info
+        delegate?.didSaveInfo(info)
+        setupImageView()
         setupInfoStackView()
+        print(info)
     }
     
     func setupImageView() {
-        var infomation = Infomation()
+        let infomation = Infomation.shared
         // imageView 셋팅
-        let image = UIImage(named: infomation.images[info!.name]!)
-        imageView.image = image
+        if let name = info?.name, let imageName = infomation.images[name], let image = UIImage(named: imageName) {
+            imageView.image = image
+        } else {
+            imageView.image = nil
+        }
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.contentMode = .scaleAspectFill
         imageView.clipsToBounds = true

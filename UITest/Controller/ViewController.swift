@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, EditViewControllerDelegate {
 
     // 박승환
     @IBOutlet weak var parkprofile: UIButton!
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     
     
     // 개인 정보를 저장할 클래스
-    let info = Infomation()
+    let info = Infomation.shared
     
         
     override func viewDidLoad() {
@@ -65,30 +65,6 @@ class ViewController: UIViewController {
         view.layer.shadowRadius = 3
         view.layer.shadowOpacity = 0.5
     }
-    
-    
-    
-    
-//    func createButton(_ name: String) -> UIButton {
-//        let button = CustomButton()
-//        button.translatesAutoresizingMaskIntoConstraints = false
-//        button.setTitle(name, for: .normal)
-//        button.setTitleColor(.black, for: .normal)
-//        
-//        let image = UIImage(named: info.images[name]!)?.withRenderingMode(.alwaysOriginal)
-//        button.setImage(image, for: .normal)
-//        button.imageView?.contentMode = .scaleAspectFill
-//
-//        // imageView가 버튼 영역을 채우도록 함
-//        button.imageView?.topAnchor.constraint(equalTo: button.topAnchor).isActive = true
-//        button.imageView?.bottomAnchor.constraint(equalTo: button.bottomAnchor).isActive = true
-//        button.imageView?.leadingAnchor.constraint(equalTo: button.leadingAnchor).isActive = true
-//        button.imageView?.trailingAnchor.constraint(equalTo: button.trailingAnchor).isActive = true
-//        
-//        button.addTarget(self, action: #selector(triggerSegue(sender:)), for: .touchUpInside)
-//        
-//        return button
-//    }
 
     // 데이터 전송을 위한 함수 override
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -98,6 +74,7 @@ class ViewController: UIViewController {
                 if let destinatiorVC = segue.destination as? DetailViewController {
                     let infomation = info.findUser(title)
                     destinatiorVC.info = infomation
+                    destinatiorVC.delegate = self
                 }
             }
         }
@@ -106,6 +83,21 @@ class ViewController: UIViewController {
     // 화면전환 메서드
     @objc func triggerSegue(sender: UIButton) {
         performSegue(withIdentifier: "showDetail", sender: sender)
+    }
+    
+    func didSaveInfo(_ info: Info) {
+        self.info.updateUser(info)
+        updateUI()
+    }
+    
+    func updateUI() {
+        // 여기에서 버튼과 배경 뷰를 업데이트합니다.
+        setUP(parkprofile, parkbackground, info.names[2])
+        setUP(kimprofile, kimbackground, info.names[1])
+        setUP(kimdhprofile, kimdhbackground, info.names[0])
+        setUP(leejhprofile, leejhbackground, info.names[4])
+        setUP(geonprofile, geonbackground, info.names[5])
+        setUP(minprofile, minbackground, info.names[3])
     }
 
 }

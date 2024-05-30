@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol EditViewControllerDelegate: AnyObject {
-    func didSaveInfo(_ info: Info)
-}
-
 class EditViewController: UIViewController {
     
     weak var delegate: EditViewControllerDelegate?
@@ -39,7 +35,7 @@ class EditViewController: UIViewController {
         super.viewDidLoad()
         
         if let info = info {
-            setImage()
+            setupImageView()
             name.text = info.name
             age.text = "\(info.age)"
             area.text = info.area
@@ -53,12 +49,16 @@ class EditViewController: UIViewController {
         navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonTapped))
     }
     
-    func setImage() {
-        let image = UIImage(named: info!.name)
-        imageView.image = image
+    func setupImageView() {
+        let infomation = Infomation.shared
+        if let name = info?.name, let imageName = infomation.images[name], let image = UIImage(named: imageName) {
+            imageView.image = image
+        } else {
+            imageView.image = UIImage(named: "defaultImage")
+        }
     }
     
-    @IBAction func saveButtonTapped(_ sender: UIBarButtonItem) {
+    @objc func saveButtonTapped() {
         guard let name = name.text,
               let age = Int(age.text ?? ""),
               let area = area.text,
@@ -71,7 +71,7 @@ class EditViewController: UIViewController {
         }
         
         let updatedInfo = Info(name: name, age: age, area: area, MBTI: MBTI, position: position, introduce: introduce, blogURL: blogURL, gitHubURL: gitHubURL)
-        
+        print(updatedInfo)
         delegate?.didSaveInfo(updatedInfo)
         navigationController?.popViewController(animated: true)
 

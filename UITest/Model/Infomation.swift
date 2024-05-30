@@ -19,7 +19,14 @@ struct Info {
 }
 
 class Infomation {
+    static let shared = Infomation()
+    
+    private init() {
+        setting()
+    }
+    
     var peoples = Array<Info>()
+    
     let names = ["김동현", "김광현", "박승환", "유민우", "이주희", "최건"]
     let ages = [29, 27, 26, 25, 30, 29]
     let areas = ["인천", "화성", "서울", "강릉", "전주", "양평"]
@@ -77,6 +84,13 @@ class Infomation {
             }
         }
         return info
+    }
+    
+    // 사람 정보 업데이트
+    func updateUser(_ updatedInfo: Info) {
+        if let index = peoples.firstIndex(where: { $0.name == updatedInfo.name }) {
+            peoples[index] = updatedInfo
+        }
     }
 
 }
