@@ -23,45 +23,17 @@ class Information {
     
     var peoples = Array<Info>()
     
-    let names = ["김동현", "김광현", "박승환", "유민우", "이주희", "최건"]
-    let ages = [29, 27, 26, 25, 30, 29]
-    let areas = ["인천", "화성", "서울", "강릉", "전주", "양평"]
-    let MBTIs = ["ESFJ", "INTJ", "ISFP", "ESTJ", "INFP", "ISFP"]
-    let positions = ["팀장", "부팀장", "팀원", "팀원", "팀원", "팀원"]
-    let introduces = [
-        "화이팅 입니다!1년 남았다..",
-        "30 많이 남았다!!",
-        "4년은 길다!",
-        "아직 5년 남았다!",
-        "30은 별거 없다!",
-        "30이 코앞이다..."
-    ]
-    let urls = [
-        "https://how-dev.tistory.com/",
-        "https://leedoseo.tistory.com/",
-        "https://shpark0920.tistory.com/",
-        "https://velog.io/@zxcv123248/posts",
-        "https://velog.io/@leejh950417/posts",
-        "https://velog.io/@geon5595/posts"
-    ]
+    let names = []
+    let ages = []
+    let areas = []
+    let MBTIs = []
+    let positions = []
+    let introduces = []
+    let urls = []
     
-    let gitHubURLs = [
-        "https://github.com/Kim-Dong-Hyeon",
-        "https://github.com/Leedoseo",
-        "https://github.com/sh990920",
-        "https://github.com/min1woo",
-        "https://github.com/jjoohee95",
-        "https://github.com/geon5595"
-    ]
+    let gitHubURLs = []
     
-    let images = [
-        "김동현" : "kdh",
-        "김광현" : "kkh",
-        "박승환" : "psh",
-        "유민우" : "umy",
-        "이주희" : "ljh",
-        "최건" : "ck"
-    ]
+    let images = []
     
     private init() {
         setting()

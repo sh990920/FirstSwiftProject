@@ -9,27 +9,22 @@ import UIKit
 
 class ViewController: UIViewController, EditViewControllerDelegate {
 
-    // 박승환
+    
     @IBOutlet weak var parkprofile: UIButton!
     @IBOutlet weak var parkbackground: UIView!
       
-    // 김광현
     @IBOutlet weak var kimprofile: UIButton!
     @IBOutlet weak var kimbackground: UIView!
       
-    // 김동현
     @IBOutlet weak var kimdhprofile: UIButton!
     @IBOutlet weak var kimdhbackground: UIView!
     
-    // 이주희
     @IBOutlet weak var leejhprofile: UIButton!
     @IBOutlet weak var leejhbackground: UIView!
       
-    // 최건
     @IBOutlet weak var geonprofile: UIButton!
     @IBOutlet weak var geonbackground: UIView!
     
-    // 유민우
     @IBOutlet weak var minprofile: UIButton!
     @IBOutlet weak var minbackground: UIView!
     
